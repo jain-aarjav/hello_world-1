@@ -1,17 +1,14 @@
 #include<stdio.h>
 #include <stdio.h>
-#include "..\include\myfile.h"
+#include "../include/myfile.h"
 
 int main(){
+   char s1[50] = "Hello world " ;
+   char s2[] = " in the main ";
+   sgs_clib_strcat(s1 ,s2);
 
-    char name[] = "Abhinav";
-    sgs_clib_convert_to_upper(name);
 
-    printf("After convering to all Caps name is: %s",name);
-#include"../include/hello.h"
-int main(){
-    char a[]="VivekDawar";
-     sgs_clib_convert_to_lower(a);
-    printf("%s",a);
+   printf("%s" , s1);
+
 
 }

@@ -1,14 +1,18 @@
 #include <stdio.h>
 #include "../include/myfile.h"
 
-void sgs_clib_convert_to_upper(char *message){
+char *sgs_clib_strcat(char *dest, const char *src)
+{
+   while(*dest!='\0')
+   {
+       dest++;
+   }
 
-    for(;*message != '\0';){
+   for(;*src!='\0';dest++,src++)
+   {
+       *dest=*src;
+   }
 
-        if((*message >= 97) && (*message<= 122)){
-            *message = *message - 32;
-        }
-        message++;
+   *dest='\0';
 
-    }
 }
